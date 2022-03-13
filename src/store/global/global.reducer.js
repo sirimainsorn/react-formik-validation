@@ -2,7 +2,7 @@ import { GlobalConstant } from "./global.constant";
 
 export const GlobalReducer = (
   state = {
-    formCodeData: {
+    formData: {
       firstName: "",
       lastName: "",
       email: "",
@@ -14,8 +14,8 @@ export const GlobalReducer = (
     case GlobalConstant.CHANGE_FORM_CODE_DATA:
       return {
         ...state,
-        formCodeData: {
-          ...state.formCodeData,
+        formData: {
+          ...state.formData,
           [action.payload.name]: action.payload.value,
         },
       };
